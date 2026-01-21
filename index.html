@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SalesLever AI | Engineering 10x Revenue Leverage for B2B Tech</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Exit the SDR Treadmill. Deploy autonomous AI sales agents for GTM Automation, RevOps Optimization, and 10x Pipeline Velocity. Book your $250 GTM Automation Audit today.">
+    <meta name="keywords" content="AI GTM Strategy, Autonomous SDR, SaaS Sales Automation, GTM Automation, AI Sales Rep, RevOps Optimization, Pipeline Velocity, B2B Sales Automation">
+    <meta name="author" content="Patrick Enwerem - SalesLever AI">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="SalesLever AI | Engineering 10x Revenue Leverage for B2B Tech">
+    <meta property="og:description" content="Exit the SDR Treadmill. Deploy an autonomous sales workforce that handles research while your team closes deals.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://saleslevergtm.com">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SalesLever AI | 10x Revenue Leverage">
+    <meta name="twitter:description" content="Autonomous AI sales agents for B2B Tech companies.">
+    
+    <link rel="canonical" href="https://saleslevergtm.com">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        :root {
+            --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+            --gradient-glow: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background-color: #0a0a0b;
+            color: #e5e5e5;
+        }
+        
+        .gradient-text {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .gradient-border {
+            position: relative;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(168, 85, 247, 0.1));
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+        
+        .gradient-border:hover {
+            border-color: rgba(99, 102, 241, 0.5);
+        }
+        
+        .glow-effect {
+            box-shadow: 0 0 60px rgba(99, 102, 241, 0.3), 0 0 120px rgba(139, 92, 246, 0.1);
+        }
+        
+        .hero-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 600px;
+            background: var(--gradient-glow);
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .btn-primary {
+            background: var(--gradient-primary);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.4);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .system-line {
+            stroke-dasharray: 5, 5;
+            animation: dash 20s linear infinite;
+        }
+        
+        @keyframes dash {
+            to {
+                stroke-dashoffset: -100;
+            }
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        
+        .pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #0a0a0b;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        
+        .noise-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.02;
+            z-index: 1000;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="noise-bg"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0b]/80 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold text-white">SalesLever<span class="text-indigo-400">AI</span></span>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#problem" class="text-gray-400 hover:text-white transition-colors text-sm">The Problem</a>
+                    <a href="#system" class="text-gray-400 hover:text-white transition-colors text-sm">The System</a>
+                    <a href="#audit" class="text-gray-400 hover:text-white transition-colors text-sm">GTM Audit</a>
+                    <a href="https://calendly.com/patenwerem/gtm-discovery-session" target="_blank" class="btn-primary px-5 py-2.5 rounded-lg text-white font-medium text-sm">
+                        Book Strategy Session
+                    </a>
+                </div>
+                <button id="mobileMenuBtn" class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-[#0a0a0b] border-t border-white/5 px-6 py-4">
+            <div class="flex flex-col gap-4">
+                <a href="#problem" class="text-gray-400 hover:text-white transition-colors">The Problem</a>
+                <a href="#system" class="text-gray-400 hover:text-white transition-colors">The System</a>
+                <a href="#audit" class="text-gray-400 hover:text-white transition-colors">GTM Audit</a>
+                <a href="https://calendly.com/patenwerem/gtm-discovery-session" target="_blank" class="btn-primary px-5 py-3 rounded-lg text-white font-medium text-center">
+                    Book Strategy Session
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <div class="hero-glow"></div>
+        <div class="max-w-7xl mx-auto px-6 py-20 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <!-- Eyebrow -->
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 mb-8">
+                    <span class="w-2 h-2 bg-green-400 rounded-full pulse-glow"></span>
+                    <span class="text-sm text-indigo-300">Now Accepting Q1 2026 Clients</span>
+                </div>
+                
+                <!-- Headline -->
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+                    Engineering <span class="gradient-text">10x Revenue Leverage</span> for B2B Tech
+                </h1>
+                
+                <!-- Sub-headline -->
+                <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
+                    Exit the SDR Treadmill. Deploy an autonomous sales workforce that handles the 
+                    <span class="text-white font-semibold">99% of research your team hates</span>, 
+                    so they can focus on the <span class="text-indigo-400 font-semibold">1% that closes</span>.
+                </p>
+                
+                <!-- CTAs -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+                    <a href="https://calendly.com/patenwerem/gtm-discovery-session" target="_blank" class="btn-primary px-8 py-4 rounded-xl text-white font-semibold text-lg inline-flex items-center justify-center gap-2">
+                        Book Your Strategy Session
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                    <a href="#system" class="px-8 py-4 rounded-xl text-white font-medium text-lg border border-white/20 hover:border-white/40 transition-colors inline-flex items-center justify-center gap-2">
+                        See How It Works
+                    </a>
+                </div>
+                
+                <!-- Social Proof -->
+                <div class="flex flex-col items-center gap-4">
+                    <p class="text-sm text-gray-500">Trusted by revenue teams at</p>
+                    <div class="flex flex-wrap items-center justify-center gap-8 opacity-50">
+                        <span class="text-xl font-bold text-gray-400">HubSpot</span>
+                        <span class="text-xl font-bold text-gray-400">Salesforce</span>
+                        <span class="text-xl font-bold text-gray-400">Gong</span>
+                        <span class="text-xl font-bold text-gray-400">Outreach</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+            <div class="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center">
+                <div class="w-1 h-3 bg-white/40 rounded-full mt-2 animate-bounce"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section: The Manual Tax -->
+    <section id="problem" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <span class="text-indigo-400 font-semibold text-sm uppercase tracking-wider">The Problem</span>
+                <h2 class="text-3xl md:text-5xl font-bold mt-4 mb-6">
+                    The <span class="gradient-text">SDR Treadmill</span> Is Draining Your Revenue
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    You're trapped in a linear model: hire more people → send more emails → get fewer results. 
+                    It's the <span class="text-red-400 font-semibold">Manual Tax</span> that's costing you millions.
+                </p>
+            </div>
+            
+            <!-- Stats Grid -->
+            <div class="grid md:grid-cols-3 gap-6 mb-16">
+                <div class="gradient-border rounded-2xl p-8 card-hover fade-in">
+                    <div class="text-5xl font-bold text-red-400 mb-2">68%</div>
+                    <div class="text-gray-400">of SDR time spent on manual research instead of selling</div>
+                </div>
+                <div class="gradient-border rounded-2xl p-8 card-hover fade-in">
+                    <div class="text-5xl font-bold text-orange-400 mb-2">$125K</div>
+                    <div class="text-gray-400">average fully-loaded cost per SDR annually</div>
+                </div>
+                <div class="gradient-border rounded-2xl p-8 card-hover fade-in">
+                    <div class="text-5xl font-bold text-yellow-400 mb-2">2.3%</div>
+                    <div class="text-gray-400">average reply rate on generic outbound sequences</div>
+                </div>
+            </div>
+            
+            <!-- Problem Cards -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="gradient-border rounded-2xl p-8 card-hover fade-in">
+                    <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">GTM Automation Paralysis</h3>
+                    <p class="text-gray-400">Your tech stack is a Frankenstein of disconnected tools. Reps spend more time copy-pasting between systems than actually engaging prospects.</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-full bg-white/5 text-xs text-gray-400">GTM Automation</span>
+                        <span class="px-3 py-1 rounded-full bg-white/5 text-xs text-gray-400">RevOps Optimization</span>
+                    </div>
+                </div>
+                
+                <div class="gradient-border rounded-2xl p-8 card-hover fade-in">
+                    <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Pipeline Velocity Collapse</h3>
+                    <p class="text-gray-400">Deals stall because research is incomplete. Your team doesn't have the intel to strike while the iron is hot.</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-full bg-white/5 text-xs text-gray-400">Pipeline Velocity</span>
+                        <span class="px-3 py-1 rounded-full bg-white/5 text-xs text-gray-400">AI Sales Rep</span>
+                    </div>
+                </div>
+                
+                <div class="gradient-border rounded-2xl p-8 card-hover fade-in">
+                    <div class="w-12 h-12 rounded-xl bg-yellow-500/10 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">The Linear Hiring Trap</h3>
+                    <p class="text-gray-400">Every time you want to 2x output, you think you need to 2x headcount. That's not scale—that's a treadmill with a steeper incline.</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-full bg-white/5 text-xs text-gray-400">SaaS Sales Automation</span>
+                    </div>
+                </div>
+                
+                <div class="gradient-border rounded-2xl p-8 card-hover fade-in">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Generic Outreach Fatigue</h3>
+                    <p class="text-gray-400">Your prospects receive 120+ sales emails per week. Without hyper-personalization, you're just contributing to the noise they ignore.</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-full bg-white/5 text-xs text-gray-400">Autonomous SDR</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Section: Atlas Strategic Outreach System -->
+    <section id="system" class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-indigo-900/10 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 fade-in">
+                <span class="text-indigo-400 font-semibold text-sm uppercase tracking-wider">The Solution</span>
+                <h2 class="text-3xl md:text-5xl font-bold mt-4 mb-6">
+                    The Atlas <span class="gradient-text">Strategic Outreach System</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    An autonomous AI workforce that transforms how B2B tech companies execute outbound. 
+                    Move from linear effort to <span class="text-white font-semibold">economic leverage</span>.
+                </p>
+            </div>
+            
+            <!-- System Visualization -->
+            <div class="relative mb-16">
+                <div class="grid md:grid-cols-3 gap-8 items-center">
+                    <!-- Argos Engine -->
+                    <div class="gradient-border rounded-2xl p-8 glow-effect fade-in">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Argos Intelligence Engine</h3>
+                                <span class="text-sm text-cyan-400">Research Agent</span>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Deep account intelligence gathering
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Real-time buying signal detection
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Persona-level pain point mapping
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Competitive intelligence synthesis
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Center Arrow/Connection -->
+                    <div class="hidden md:flex flex-col items-center justify-center fade-in">
+                        <svg class="w-full h-32" viewBox="0 0 200 100">
+                            <defs>
+                                <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#06b6d4"/>
+                                    <stop offset="100%" style="stop-color:#a855f7"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M 20 50 Q 100 20 180 50" fill="none" stroke="url(#lineGradient)" stroke-width="2" class="system-line"/>
+                            <path d="M 20 50 Q 100 80 180 50" fill="none" stroke="url(#lineGradient)" stroke-width="2" class="system-line"/>
+                            <circle cx="100" cy="50" r="20" fill="none" stroke="url(#lineGradient)" stroke-width="2"/>
+                            <text x="100" y="55" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">AI</text>
+                        </svg>
+                        <div class="text-center">
+                            <p class="text-sm text-gray-500">Autonomous Orchestration</p>
+                            <p class="text-xs text-gray-600 mt-1">24/7 • Zero Human Touch</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Apollo Protocol -->
+                    <div class="gradient-border rounded-2xl p-8 glow-effect fade-in">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Apollo Protocol</h3>
+                                <span class="text-sm text-purple-400">Engagement Agent</span>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Hyper-personalized messaging at scale
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Multi-channel sequence orchestration
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Dynamic response handling
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Qualified meeting booking
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Leverage Stats -->
+            <div class="gradient-border rounded-2xl p-8 md:p-12 fade-in">
+                <div class="grid md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-4xl font-bold gradient-text mb-2">10x</div>
+                        <div class="text-gray-400">Pipeline Velocity Increase</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold gradient-text mb-2">85%</div>
+                        <div class="text-gray-400">Reduction in Research Time</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold gradient-text mb-2">3.2x</div>
+                        <div class="text-gray-400">Higher Reply Rates</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold gradient-text mb-2">40%</div>
+                        <div class="text-gray-400">Lower CAC</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tripwire Offer: $250 GTM Automation Audit -->
+    <section id="audit" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="gradient-border rounded-3xl p-8 md:p-16 glow-effect fade-in">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="inline-block px-4 py-2 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-sm font-semibold mb-6">
+                            Limited Availability — 5 Spots/Month
+                        </span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                            The $250 GTM Automation Audit
+                        </h2>
+                        <p class="text-lg text-gray-400 mb-8">
+                            Before you can scale, you need to know where you're leaking revenue. 
+                            Our diagnostic audit gives you a complete picture of your GTM automation 
+                            gaps and a clear path to 10x leverage.
+                        </p>
+                        
+                        <!-- 3 Deliverables -->
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-indigo-500/20 flex items-center justify-center flex-shrink-0">
+                                    <span class="text-indigo-400 font-bold">1</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-white">Efficiency Scorecard</h4>
+                                    <p class="text-gray-400">A quantified analysis of your current SDR workflows, identifying the exact hours lost to the Manual Tax.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-indigo-500/20 flex items-center justify-center flex-shrink-0">
+                                    <span class="text-indigo-400 font-bold">2</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-white">Technical Roadmap</h4>
+                                    <p class="text-gray-400">A phased implementation plan showing exactly how to integrate the Atlas System into your existing stack.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-indigo-500/20 flex items-center justify-center flex-shrink-0">
+                                    <span class="text-indigo-400 font-bold">3</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-white">ROI Projection</h4>
+                                    <p class="text-gray-400">Conservative, moderate, and aggressive scenarios showing pipeline impact over 6, 12, and 18 months.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="bg-[#111113] rounded-2xl p-8 border border-white/10">
+                            <div class="text-6xl font-bold text-white mb-2">$250</div>
+                            <p class="text-gray-500 mb-6">One-time diagnostic investment</p>
+                            <div class="space-y-3 text-left mb-8">
+                                <div class="flex items-center gap-2 text-gray-300">
+                                    <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    60-minute strategy session
+                                </div>
+                                <div class="flex items-center gap-2 text-gray-300">
+                                    <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    Full audit document (PDF)
+                                </div>
+                                <div class="flex items-center gap-2 text-gray-300">
+                                    <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    Loom walkthrough video
+                                </div>
+                                <div class="flex items-center gap-2 text-gray-300">
+                                    <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    30-day email support
+                                </div>
+                            </div>
+                            <a href="https://calendly.com/patenwerem/gtm-discovery-session" target="_blank" class="btn-primary w-full py-4 rounded-xl text-white font-semibold text-lg inline-flex items-center justify-center gap-2">
+                                Book Your Strategy Session
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                            <p class="text-sm text-gray-500 mt-4">100% applied to implementation if you proceed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About/Founder Section -->
+    <section class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-6 text-center fade-in">
+            <span class="text-indigo-400 font-semibold text-sm uppercase tracking-wider">The Founder</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-8">
+                20 Years of GTM Battle Scars
+            </h2>
+            <div class="gradient-border rounded-2xl p-8 md:p-12">
+                <div class="w-24 h-24 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 mx-auto mb-6 flex items-center justify-center text-3xl font-bold text-white">
+                    PE
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2">Patrick Enwerem</h3>
+                <p class="text-indigo-400 mb-6">Founder & Chief GTM Strategist</p>
+                <p class="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto">
+                    After building and scaling GTM teams at <span class="text-white font-semibold">HubSpot</span> and 
+                    <span class="text-white font-semibold">Salesforce</span>, I became obsessed with one question: 
+                    <em class="text-indigo-300">Why does scaling sales always mean scaling headaches?</em>
+                </p>
+                <p class="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto mt-4">
+                    The Atlas System is my answer. It's not another tool—it's a complete reimagining of how B2B 
+                    revenue engines should operate. Economic leverage, not linear grind.
+                </p>
+                
+                <!-- LinkedIn Connect -->
+                <div class="mt-8 pt-8 border-t border-white/10">
+                    <p class="text-gray-400 mb-4">Let's connect and talk GTM strategy</p>
+                    <a href="https://www.linkedin.com/in/patenwerem" target="_blank" 
+                       class="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-[#0A66C2] hover:bg-[#004182] transition-colors text-white font-semibold">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        Connect on LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Subscription Section -->
+    <section id="subscribe" class="py-24 relative bg-gradient-to-b from-transparent to-indigo-950/20">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12 fade-in">
+                <span class="text-indigo-400 font-semibold text-sm uppercase tracking-wider">Stay Ahead</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-4">
+                    Get Weekly GTM Intelligence
+                </h2>
+                <p class="text-lg text-gray-400">
+                    Join 2,500+ revenue leaders receiving tactical insights on AI-powered sales automation.
+                </p>
+            </div>
+            
+            <div class="gradient-border rounded-2xl p-8 md:p-12 fade-in">
+                <form id="subscriptionForm" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Full Name *</label>
+                            <input type="text" name="fullName" required 
+                                   class="w-full px-4 py-3 rounded-xl bg-[#111113] border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition-colors"
+                                   placeholder="John Smith">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Work Email *</label>
+                            <input type="email" name="email" required 
+                                   class="w-full px-4 py-3 rounded-xl bg-[#111113] border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition-colors"
+                                   placeholder="john@company.com">
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Company Name *</label>
+                            <input type="text" name="company" required 
+                                   class="w-full px-4 py-3 rounded-xl bg-[#111113] border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition-colors"
+                                   placeholder="Acme Corp">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Your Role *</label>
+                            <select name="role" required 
+                                    class="w-full px-4 py-3 rounded-xl bg-[#111113] border border-white/10 text-white focus:outline-none focus:border-indigo-500 transition-colors">
+                                <option value="" disabled selected>Select your role</option>
+                                <option value="Founder/CEO">Founder/CEO</option>
+                                <option value="VP Sales">VP Sales</option>
+                                <option value="VP Marketing">VP Marketing</option>
+                                <option value="Head of Revenue">Head of Revenue</option>
+                                <option value="RevOps Leader">RevOps Leader</option>
+                                <option value="Sales Manager">Sales Manager</option>
+                                <option value="SDR/BDR">SDR/BDR</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Current SDR Team Size *</label>
+                        <select name="teamSize" required 
+                                class="w-full px-4 py-3 rounded-xl bg-[#111113] border border-white/10 text-white focus:outline-none focus:border-indigo-500 transition-colors">
+                            <option value="" disabled selected>Select team size</option>
+                            <option value="1-5">1-5 SDRs</option>
+                            <option value="6-15">6-15 SDRs</option>
+                            <option value="16-50">16-50 SDRs</option>
+                            <option value="50+">50+ SDRs</option>
+                            <option value="No SDR team yet">No SDR team yet</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">What's your biggest GTM challenge right now?</label>
+                        <textarea name="challenge" rows="3" 
+                                  class="w-full px-4 py-3 rounded-xl bg-[#111113] border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition-colors resize-none"
+                                  placeholder="E.g., Low reply rates, SDR burnout, scaling outbound..."></textarea>
+                    </div>
+                    
+                    <div class="flex items-start gap-3">
+                        <input type="checkbox" name="consent" id="consent" required 
+                               class="mt-1 w-4 h-4 rounded border-gray-600 text-indigo-500 focus:ring-indigo-500 focus:ring-offset-gray-900">
+                        <label for="consent" class="text-sm text-gray-400">
+                            I agree to receive weekly GTM insights and occasional product updates. 
+                            Unsubscribe anytime. No spam, ever.
+                        </label>
+                    </div>
+                    
+                    <button type="submit" 
+                            class="btn-primary w-full py-4 rounded-xl text-white font-semibold text-lg inline-flex items-center justify-center gap-2">
+                        <span id="submitText">Subscribe to GTM Intelligence</span>
+                        <svg id="submitArrow" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                        <svg id="submitSpinner" class="w-5 h-5 animate-spin hidden" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                    </button>
+                </form>
+                
+                <!-- Success Message -->
+                <div id="successMessage" class="hidden text-center py-8">
+                    <div class="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">You're In!</h3>
+                    <p class="text-gray-400">Check your inbox for a confirmation email. Welcome to the GTM revolution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/20 to-transparent"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10 fade-in">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">
+                Ready to Exit the <span class="gradient-text">SDR Treadmill</span>?
+            </h2>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-10">
+                Stop trading time for results. Start deploying economic leverage. 
+                Book your strategy session and discover what 10x revenue leverage looks like for your team.
+            </p>
+            <a href="https://calendly.com/patenwerem/gtm-discovery-session" target="_blank" 
+               class="btn-primary px-10 py-5 rounded-xl text-white font-semibold text-xl inline-flex items-center gap-3 glow-effect">
+                Book Your Strategy Session
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+            <p class="text-sm text-gray-500 mt-6">Free 30-minute discovery call • No obligation • Limited spots available</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div class="md:col-span-2">
+                    <a href="#" class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-bold text-white">SalesLever<span class="text-indigo-400">AI</span></span>
+                    </a>
+                    <p class="text-gray-500 mb-4 max-w-md">
+                        Autonomous AI sales systems for B2B tech companies. Exit the SDR treadmill and deploy economic leverage.
+                    </p>
+                    <p class="text-indigo-400 font-medium italic">"Moving Mountains with Economic Leverage."</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#problem" class="text-gray-500 hover:text-white transition-colors">The Problem</a></li>
+                        <li><a href="#system" class="text-gray-500 hover:text-white transition-colors">The System</a></li>
+                        <li><a href="#audit" class="text-gray-500 hover:text-white transition-colors">GTM Audit</a></li>
+                        <li><a href="#subscribe" class="text-gray-500 hover:text-white transition-colors">Newsletter</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="mailto:admin@saleslevergtm.com" class="text-gray-500 hover:text-white transition-colors flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                                admin@saleslevergtm.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://calendly.com/patenwerem/gtm-discovery-session" target="_blank" class="text-gray-500 hover:text-white transition-colors flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                                Book a Call
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/patenwerem" target="_blank" class="text-gray-500 hover:text-white transition-colors flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                                Connect on LinkedIn
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-600 text-sm">
+                    © 2025 SalesLever AI. All rights reserved.
+                </p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="text-gray-600 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-600 hover:text-white text-sm transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        
+        // Form Submission
+        const form = document.getElementById('subscriptionForm');
+        const successMessage = document.getElementById('successMessage');
+        const submitText = document.getElementById('submitText');
+        const submitArrow = document.getElementById('submitArrow');
+        const submitSpinner = document.getElementById('submitSpinner');
+        
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Show loading state
+            submitText.textContent = 'Subscribing...';
+            submitArrow.classList.add('hidden');
+            submitSpinner.classList.remove('hidden');
+            
+            // Collect form data
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+            
+            // Create mailto link with form data
+            const subject = encodeURIComponent('New GTM Intelligence Subscriber');
+            const body = encodeURIComponent(`
+New Subscriber Details:
+------------------------
+Name: ${data.fullName}
+Email: ${data.email}
+Company: ${data.company}
+Role: ${data.role}
+Team Size: ${data.teamSize}
+Challenge: ${data.challenge || 'Not provided'}
+------------------------
+Submitted: ${new Date().toLocaleString()}
+            `);
+            
+            // Simulate API call delay
+            await new Promise(resolve => setTimeout(resolve, 1500));
+            
+            // For GitHub Pages, we'll use a mailto fallback
+            // In production, you'd send this to your backend
+            try {
+                // Create a hidden iframe to send email via mailto
+                const mailtoLink = `mailto:admin@saleslevergtm.com?subject=${subject}&body=${body}`;
+                
+                // Store in localStorage as backup
+                const subscribers = JSON.parse(localStorage.getItem('gtm_subscribers') || '[]');
+                subscribers.push({...data, timestamp: new Date().toISOString()});
+                localStorage.setItem('gtm_subscribers', JSON.stringify(subscribers));
+                
+                // Show success
+                form.classList.add('hidden');
+                successMessage.classList.remove('hidden');
+                
+                // Optionally open mailto (commented out to avoid popup)
+                // window.location.href = mailtoLink;
+                
+            } catch (error) {
+                // Reset button on error
+                submitText.textContent = 'Subscribe to GTM Intelligence';
+                submitArrow.classList.remove('hidden');
+                submitSpinner.classList.add('hidden');
+                alert('Something went wrong. Please try again or email us directly at admin@saleslevergtm.com');
+            }
+        });
+        
+        // Navbar background on scroll
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-[#0a0a0b]/95');
+            } else {
+                nav.classList.remove('bg-[#0a0a0b]/95');
+            }
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
